@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Hossein Shamsi - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .tech-badge { transition: all 0.3s ease; }
+        .tech-badge:hover { transform: scale(1.05); }
+        .typing-animation { 
+            border-right: 2px solid #667eea; 
+            animation: blink 1s infinite; 
+        }
+        @keyframes blink { 0%, 50% { border-color: transparent; } 51%, 100% { border-color: #667eea; } }
+        .section-fade { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .section-fade.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-800">Amir Hossein Shamsi</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <div class="mb-6">
+                <div class="w-32 h-32 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center backdrop-blur-sm">
+                    <i class="fas fa-code text-4xl"></i>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                👋 Hi, I'm <span class="typing-animation">Amir Hossein Shamsi</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light mb-8 opacity-90">
+                💻 Python Developer | 🧠 ML Enthusiast | ⚙️ Backend Engineer
+            </h2>
+            <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed opacity-90">
+                I'm passionate about building high-performance systems, AI-powered solutions, and scalable backend architectures. 
+                I thrive in clean code, async systems, and collaborative open-source projects.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#skills" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    View My Skills
+                </a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">🚧 Currently Building</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">LLM-Powered Chatbots</h3>
+                        <p class="text-gray-600">Building intelligent conversational AI with LangChain & OpenAI</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl">
+                        <div class="text-4xl mb-4">🔍</div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">RAG Pipelines</h3>
+                        <p class="text-gray-600">Contextual search and intelligent retrieval systems</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-green-50 to-teal-100 p-8 rounded-2xl">
+                        <div class="text-4xl mb-4">🔧</div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">ML + Backend Tools</h3>
+                        <p class="text-gray-600">Combining Machine Learning with robust backend engineering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">🌱 Exploring & Growing</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">📚 Deep Learning</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">🔍 Vector Search</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">FAISS</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Pinecone</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">🐳 DevOps Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Kubernetes</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">💡 Ask Me About</h2>
+                <p class="text-center text-gray-600 mb-16">Technologies I work with daily</p>
+                
+                <!-- Main Skills -->
+                <div class="flex flex-wrap justify-center gap-4 mb-16">
+                    <span class="tech-badge bg-teal-500 text-white px-6 py-3 rounded-full font-semibold">FastAPI</span>
+                    <span class="tech-badge bg-black text-white px-6 py-3 rounded-full font-semibold">Flask</span>
+                    <span class="tech-badge bg-blue-500 text-white px-6 py-3 rounded-full font-semibold">AsyncIO</span>
+                    <span class="tech-badge bg-purple-500 text-white px-6 py-3 rounded-full font-semibold">RAG Pipelines</span>
+                    <span class="tech-badge bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold">Prompt Engineering</span>
+                    <span class="tech-badge bg-blue-600 text-white px-6 py-3 rounded-full font-semibold">PostgreSQL</span>
+                    <span class="tech-badge bg-red-500 text-white px-6 py-3 rounded-full font-semibold">Redis</span>
+                </div>
+
+                <!-- Categorized Skills -->
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">🧠 Machine Learning</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg">Python</span>
+                            <span class="bg-red-100 text-red-800 px-4 py-2 rounded-lg">PyTorch</span>
+                            <span class="bg-orange-100 text-orange-800 px-4 py-2 rounded-lg">TensorFlow</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg">Scikit-Learn</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">📊 Data Science</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg">Pandas</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg">NumPy</span>
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-lg">OpenCV</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">🛠️ Backend & DevOps</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-teal-100 text-teal-800 px-4 py-2 rounded-lg">FastAPI</span>
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-lg">Django</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg">Docker</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg">Kubernetes</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-lg">PostgreSQL</span>
+                            <span class="bg-red-100 text-red-800 px-4 py-2 rounded-lg">Redis</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Fun Facts Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold mb-8 text-gray-800">✨ Fun Facts</h2>
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        🔁 Obsessed with clean code, async IO, and reproducible ML workflows.<br>
+                        🌍 Always learning and exploring new technologies to solve complex problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="section-fade">
+                <h2 class="text-4xl font-bold mb-8">📬 Get in Touch</h2>
+                <p class="text-xl mb-12 opacity-90">
+                    Let's collaborate on your next AI or backend project!
+                </p>
+                <div class="flex justify-center space-x-8">
+                    <a href="mailto:shamsiamirhossein1@gmail.com" 
+                       class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="https://github.com/Amir-Hossein-shamsi" 
+                       class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center space-x-2">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p>&copy; 2025 Amir Hossein Shamsi. Built with passion for clean code and AI innovation.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.querySelector('nav div div');
+        
+        mobileMenu.addEventListener('click', () => {
+            const menu = nav.querySelector('div:last-child');
+            menu.classList.toggle('hidden');
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Typing animation effect
+        const typingElement = document.querySelector('.typing-animation');
+        if (typingElement) {
+            const text = typingElement.textContent;
+            typingElement.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    typingElement.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            
+            setTimeout(typeWriter, 1000);
+        }
+
+        // Add hover effects to tech badges
+        document.querySelectorAll('.tech-badge').forEach(badge => {
+            badge.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            
+            badge.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c84de164954db9',t:'MTc1NDc1MzUyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
